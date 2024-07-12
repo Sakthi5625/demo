@@ -1,0 +1,51 @@
+code 8
+
+package sakthi;
+import java.util.*;
+public class Train {
+
+	public static void main(String[] args) {
+String a="Intercity";
+String b="Chennai express";
+Scanner sc=new Scanner(System.in);
+System.out.println("Enter the train name");
+String t=a;
+if(t==a) {
+	System.out.println("Train number:101");
+	System.out.println("Source:Coimbatore");
+	System.out.println("Destination:Chennai");
+	System.out.println("First class");
+	System.out.println("Arraival time:10.00am");
+	System.out.println("Depature time:16.00pm ");
+	System.out.println("Fare is 400");
+	System.out.println("Entered no.of.tickets to be booked");
+	int n = sc.nextInt();
+	for(int i=1;i==n;i++) {
+		System.out.println("Enter the age");
+		int age=sc.nextInt();
+		int dis,fare=400,amt;
+		if(age>=5) {
+			System.out.println("No fare to be paid");
+		}
+		else if(age>=6 && age<=12) {
+			amt=fare*20/100;
+			System.out.println("The amount to be paid is "+amt);
+		}
+		else if(age>=13&&age<=59) {
+			amt=fare*10/100;
+			System.out.println("The amount to be paid is "+amt);
+		}
+		else if (age>=60) {
+			amt=fare*50/100;
+			System.out.println("The amount to be paid is "+amt);
+		}
+		else {
+		System.out.println("Invalid age ");
+	}
+}
+}
+else {
+	System.out.println("Entered train name does not exist!");
+}
+	}
+}

@@ -1,0 +1,47 @@
+code 6
+package sakthi;
+import java.util.*;
+public class Task27 {
+void circle() {
+	Scanner sc=new Scanner(System.in);
+	System.out.println("Enter the radius value:");
+	int r;
+	double s;
+	r=sc.nextInt();
+	s=3.14*r*r;
+	System.out.println("Area of circle is: "+s);
+}
+void rect() {
+	Scanner sc=new Scanner(System.in);
+	System.out.println("Enter the value of l and b:");
+	int l,b,x;
+	l=sc.nextInt();
+	b=sc.nextInt();
+	x=l*b;
+	System.out.println("Area of rectangle is: "+x);
+}
+void cube() {
+	Scanner sc=new Scanner(System.in);
+	System.out.println("Enter the value of a:");
+	int a,z;
+	a=sc.nextInt();
+	z=a*a*a;
+	System.out.println("Area of cube is: "+z);
+}
+	public static void main(String[] args) {
+Task27 t1=new Task27();
+t1.circle();
+t1.rect();
+t1.cube();
+Task27 t2=new Task27();
+t2.circle();
+t2.rect();
+t2.cube();
+Task27 t3=new Task27();
+t3.circle();
+t3.rect();
+t3.cube();
+
+	}
+
+}
