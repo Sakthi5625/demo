@@ -1,0 +1,29 @@
+code 3
+package sakthi;
+import java.util.*;
+public class task1 {
+
+	public static void main(String[] args) {
+Scanner sc= new Scanner(System.in);
+int sold,target,amt=0;
+System.out.println("Enter the sold value: ");
+sold=sc.nextInt();
+System.out.println("Enter the target: ");
+target=sc.nextInt();
+if(sold<=target)
+{
+	System.out.println("the amt is "+ (amt+=sold) );
+}
+else if(sold>=target) 
+{
+	int extra=sold-target;
+int extraamt=extra*2;
+	System.out.println("total gain="+(amt+extraamt));
+}
+else {
+System.out.println("Invalid");
+}
+
+	}
+
+}

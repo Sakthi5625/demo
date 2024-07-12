@@ -1,0 +1,44 @@
+code 5
+
+package sakthi;
+import java.util.*;
+public class Task15 {
+
+	public static void main(String[] args) {
+Scanner sc=new Scanner (System.in);
+int i,n,basicSalary,hra,da,ta,pf;
+String name;
+System.out.println("Enter the n value: ");
+n=sc.nextInt();
+for(i=1;i<=n;i++) {
+	
+	System.out.println("Enter the name of the employee");
+	name=sc.next();
+	System.out.println("Enter the basic salary: ");
+	basicSalary=sc.nextInt();
+	System.out.println("Enter the hra: ");
+	hra=sc.nextInt();
+	hra=basicSalary*hra/100;
+	System.out.println("The hra of "+name+"is: "+hra);
+    System.out.println("Enter the da: ");
+	da=sc.nextInt();
+	da=basicSalary*da/100;
+
+	System.out.println("Enter the ta: ");
+	ta=sc.nextInt();
+	ta=basicSalary*ta/100;
+
+	System.out.println("Enter the pf: ");
+	pf=sc.nextInt();
+	int gross =basicSalary+hra+da+ta+pf;
+	System.out.println("The gross salary of "+name+"is: "+gross);
+	int netValue=gross-pf;
+	System.out.println("The net salary of "+name+"is: "+netValue);
+
+	
+	
+	
+}
+	}
+
+}

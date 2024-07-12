@@ -1,0 +1,58 @@
+code 2
+
+package sakthi;
+import java.util.*;
+public class SalaryCal {
+void personal(String Name,int age, String City, int mobnum) {
+	System.out.println("Employee name is: "+Name);
+    System.out.println("Enter the age: "+age);
+	System.out.println("The city of the Employee is: "+City);
+	System.out.println("Enter the mobile number: "+mobnum);
+	
+}
+void official() {
+	Scanner sc=new Scanner(System.in);
+	System.out.println("Enter the Employee ID number.");
+    int id =sc.nextInt();
+	System.out.println("Enter the designation");
+	String des = sc.next();
+	System.out.println("Employee ID: "+id);
+	System.out.println("Employee designation: "+des);
+
+}
+void cal_salary() {
+	Scanner sc=new Scanner(System.in);
+	System.out.println("Enter the basic pay: ");
+	int bp = sc.nextInt();
+	System.out.println("The basic pay of the employee is: "+bp);
+	System.out.println("Enter the hra: ");
+	float hra = sc.nextFloat();
+	hra=bp*hra/100;
+	System.out.println("The hra is: "+hra);
+	System.out.println("Enter the da: ");
+	float da=sc.nextFloat();
+	da=bp*da/100;
+	System.out.println("The hra is: "+da);
+	System.out.println("Enter the ta: ");
+	float ta=sc.nextFloat();
+	ta=bp*ta/100;
+	System.out.println("The hra is: "+ta);
+	System.out.println("Enter the pf: ");
+	float pf=sc.nextFloat();
+	pf=bp*pf/100;
+	System.out.println("The pf is: "+pf);
+	float gross =bp+hra+da+ta+pf;
+	System.out.println("The gross salary is: "+gross);
+	float netValue=gross-pf;
+	System.out.println("The net salary is: "+netValue);
+}
+
+	public static void main(String[] args) {
+SalaryCal s1=new SalaryCal();
+
+s1.personal("sakthi",19,"cbe",456776);
+s1.official();
+s1.cal_salary();
+	}
+
+}

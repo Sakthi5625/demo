@@ -1,0 +1,56 @@
+code
+
+package sakthi;
+import java.util.*;
+public class Project1 {
+
+	public static void main(String[] args) {
+Scanner sc=new Scanner(System.in);
+int i,num=1234,minbal=1000,pin,dep,totamt=5000,withdraw;
+String opt;
+System.out.println("Enter the pin number");
+pin=sc.nextInt();
+if(num==pin) {
+
+	String choice;
+	System.out.println("Enter the rep:");
+	char rep;
+	rep=sc.next().charAt(0);
+	char ch='y';
+	
+	do {
+	System.out.println("Enter the choice");
+	choice=sc.next();
+	switch(choice) {
+	case "dep" :System.out.println("Enter the deposit amount");
+	dep=sc.nextInt();
+	totamt=totamt+dep;
+	System.out.println("The total amount after deposit is: "+totamt);
+	break;
+	case "withdraw": System.out.println("Enter the withdraw amount");
+	withdraw=sc.nextInt();
+	totamt=totamt-withdraw;
+	if(totamt<=1000) 
+	{
+//		//totamt=totamt-withdraw;
+//		System.out.println("The total amount after withdraw is: "+totamt);
+//	}
+//	else (totamt<=1000) {
+		System.out.println("Minimum balance reached: unable to withdraw");
+		
+	}
+	else{
+		
+		System.out.println("The amount after withdraw="+(totamt));
+	}
+	break;
+	case "bankbal": System.out.println("The bank balance is "+totamt);
+	break;
+   }
+	}while(rep==ch);
+}
+else {
+	System.out.println("The entered pin is invalid.");
+}
+	}
+}
